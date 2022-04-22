@@ -1,38 +1,115 @@
-.App {
-  text-align: center;
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+/* app.js */
+.App{
+  background-color: #172A3A;
+  color: #FFFFFF;
+  font-family: 'Poppins', sans-serif;
+  font-size: 16px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+/* ProjectTitle.js */
+nav, .app-menu{
   display: flex;
-  flex-direction: column;
+  justify-content: space-between;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
 }
 
-.App-link {
-  color: #61dafb;
+nav{ 
+  padding: .6rem 0;
+  margin-bottom: 1.3rem;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.btn{ padding: 0.5rem; }
+
+.close-btn{
+  position: fixed;
+  top: 1rem;
+  right: 1.3rem;
+  display: none;
+}
+
+.content-img{
+  background-color: gray;
+  width: 100%;
+  height: 10rem;
+  margin-bottom: 1rem;
+}
+.content p{
+  margin: 0.5rem 0;
+  letter-spacing: 0.1rem;
+}
+.container{
+  min-height: 100vh;
+  padding: 0.8rem 1.7rem;
+  display: block;
+}
+
+.content-container.ar{ display: none;}
+.close-btn.ar, .model-menu.ar{ display: block;}
+
+.AR-btn{
+  width: 100%;
+  padding: 0.5rem 0;
+  font-family: 'Poppins', sans-serif;
+  font-size: 1rem;
+  background-color: #3A678D;
+  color: #FFFFFF;
+  outline: none;
+  border: none;
+  border-radius: 0.3rem;
+  margin-top: 2rem;
+}
+
+.model-menu{ display: none;}
+
+.model-nav{
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: fit-content;
+  background-color: rgb(21, 182, 115);
+  padding: 2rem 1rem;
+  display: flex;
+  flex-wrap: nowrap;
+  align-items: center;
+  overflow: scroll;
+  white-space: nowrap;
+  transform: translateY(100%);
+  transition: all 0.5s;
+}
+
+.model-nav span{
+  margin: 0 0.5rem;
+}
+
+.openBtn{
+  position: fixed;
+  bottom: 0rem;
+  right: 1rem;
+  background-color: rgb(21, 182, 115);
+  border-radius: 1.5rem 1.5rem 0 0;
+  border: none;
+  outline: none;
+  transform: translateY(0%);
+  transition: 0.5s;
+}
+
+.nav-opened-menu{ transform: translateY(0%); }
+
+.btn-opened-menu{ transform: translateY(-150%); }
+
+/* AppMenu.js */
+.app-menu{
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: #101D27;
+  padding: 1.3rem 1.5rem;
 }
